@@ -25,7 +25,7 @@ public class FakeStoreClient {
     public List<FakeStoreProductResponseDTO> getAllProducts() {
         //find the API of PRODUCT
 
-        String fakeStoreAllProductURL = fakestoreBaseURL.concat(fakeStoreAPIProductPath);git
+        String fakeStoreAllProductURL = fakestoreBaseURL.concat(fakeStoreAPIProductPath);
         RestTemplate restTemplate = restTemplateBuilder.build();
         ResponseEntity<FakeStoreProductResponseDTO[]> productsList =
                 restTemplate.getForEntity(fakeStoreAllProductURL,FakeStoreProductResponseDTO[].class);
